@@ -176,7 +176,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.31
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -367,7 +367,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1863057191}
   - component: {fileID: 1863057192}
-  - component: {fileID: 1863057193}
   m_Layer: 0
   m_Name: CardsTarget
   m_TagString: Untagged
@@ -401,21 +400,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030050310576201428ed4f98582614e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _clips:
+  - {fileID: 8300000, guid: 37fa66a58faa4d9439b18e5ecf3a34f6, type: 3}
+  - {fileID: 8300000, guid: a705c89fd78013f46893b7bd96759b82, type: 3}
+  - {fileID: 8300000, guid: 643900298f729cb4db67342537bcbb50, type: 3}
+  - {fileID: 8300000, guid: 85e60dc613bc0d640b4dfe0d11e837c5, type: 3}
+  - {fileID: 8300000, guid: 0aace4fc850c7c048a476149d60aaa76, type: 3}
+  - {fileID: 8300000, guid: 8db0a28d87239884190aa67950941403, type: 3}
+  - {fileID: 8300000, guid: 714d257b6ded3aa41bab86935097e8e6, type: 3}
+  - {fileID: 8300000, guid: 6bb941dea1c1d524c934f70296bb62c0, type: 3}
+  _source: {fileID: 79589450}
   _target: {fileID: 1863057191}
   _cardPrefab: {fileID: 9168731871288263959, guid: 95f9fb959ce1dce488d354281ac9daba, type: 3}
-  _rows: 1
-  _colums: 2
+  _rows: 2
+  _colums: 4
   _rowSpacing: 2
   _columnSpacing: 2
---- !u!114 &1863057193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863057190}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b34a7eec3bb018947b10405c1b76722f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _lastPick: {fileID: 0}

@@ -4,26 +4,25 @@ using UnityEngine;
 
 public class CardAction : MonoBehaviour
 {
-    GameObject[] cards;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        cards = GameObject.FindGameObjectsWithTag("Card");
-    }
+    public AudioClip _clip;
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
+    public AudioSource _source;
 
+    public CardSpawner _spawner;
 
     private void OnMouseDown()
     {
-        if(cards[0].transform == gameObject.transform)
-            FindObjectOfType<AudioManager>().Play("tnt_start");
-        if (cards[1].transform == gameObject.transform)
-            FindObjectOfType<AudioManager>().Play("tnt_end");
+        if(_source.clip != null && _source.clip.name.Split('_')[0] == _clip.name.Split('_')[0] && _source.clip.name!= _clip.name){
+            Destroy(transform.gameObject);
+            Destroy(_spawner._lastPick);
+        }
+
+        _source.Stop();
+        _source.clip = _clip;
+        _source.Play();
+
+        _spawner._lastPick = transform.gameObject;
     }
 
 
